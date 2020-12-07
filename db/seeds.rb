@@ -38,9 +38,9 @@ puts "creating baskets ....."
 
 Basket.destroy_all
 
-basket1 = Basket.create! user_id:user1.id
-basket2 = Basket.create! user_id:user2.id
-basket3 = Basket.create! user_id:user3.id
+basket1 = Basket.create! user_id: user1.id
+basket2 = Basket.create! user_id: user2.id
+basket3 = Basket.create! user_id: user3.id
 
 puts "created baskets: #{Basket.count}"
 

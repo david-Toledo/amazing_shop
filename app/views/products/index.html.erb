@@ -1,4 +1,14 @@
-<h1>Products in stock</h1>
-<p>
-  
-</p>
+
+<h1>Amazing Products in stock</h1>
+
+
+List:
+
+<ul>
+
+  <% @products.each do |product| %>
+  <li>
+    <%= link_to product.title, product_path(product.id) %>
+  </li>
+  <% end %>
+</ul>
