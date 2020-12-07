@@ -14,6 +14,6 @@ User.destroy_all
 
 user1 = User.create! email:'david@ga.co', password:'pass', username:'david_sei', image:"https://place-puppy.com/300x500"
 
-user2 = User.create! email:'luke@ga.co', password:'pass', username:'luke_sei', imagdee:"https://place-puppy.com/300x500"
+user2 = User.create! email:'luke@ga.co', password:'pass', username:'luke_sei', image:"https://place-puppy.com/300x500"
 
 user3 = User.create! email:'zara@ga.co', password:'pass', username:'zara_sei', image:"https://place-puppy.com/300x500"
