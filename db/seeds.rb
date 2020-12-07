@@ -14,6 +14,22 @@ User.destroy_all
 
 user1 = User.create! email:'david@ga.co', password:'pass', username:'david_sei', image:"https://place-puppy.com/300x500"
 
-user2 = User.create! email:'luke@ga.co', password:'pass', username:'luke_sei', image:"https://place-puppy.com/300x500"
+user2 = User.create! email:'luke@ga.co', password:'pass', username:'luke_sei', image:"https://place-puppy.com/300x400"
 
-user3 = User.create! email:'zara@ga.co', password:'pass', username:'zara_sei', image:"https://place-puppy.com/300x500"
+user3 = User.create! email:'zara@ga.co', password:'pass', username:'zara_sei', image:"https://place-puppy.com/300x600"
+
+
+
+# puts "creating products"
+#
+# Product.destroy_all
+#
+# product1 = Product.
+#
+#
+# t.string :title
+# t.string :brand
+# t.string :department
+# t.text :description
+# t.decimal :price, precision:10, scale:2
+# t.text :image
