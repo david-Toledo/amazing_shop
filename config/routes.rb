@@ -1,47 +1,28 @@
 Rails.application.routes.draw do
 
+resources :users
+  # get 'users/new'
+  # get 'users/create'
+  # get 'users/index'
+  # get 'users/show'
+  # get 'users/edit'
+  # get 'users/update'
+  # get 'users/destroy'
+  # get 'session/new'
+  # get 'session/create'
+  # get 'session/destroy'
+
 
 root to: 'pages#home'
 
-##Create#####################################################################
-#1######################################################################
 
-
-#2###################################################################
-
-
-
-#read###########################################################################
-#1############################################################################
-
-# get 'products/' => 'products#index'
 resources :products
 
-#2##########################################################################
+
+#login/logout routes
+get '/login' => 'session#new'
+post '/login' => 'session#create'
+delete '/login' => 'session#destroy'
 
 
-#update #######################################################################
-#1#########################################################################
-
-
-#2#########################################################################
-
-
-#destroy#####################################################################
-#1#########################################################################
-
-
-#2#########################################################################
-
-
-
- #remove the below everytime the controller creates them
-  # get 'products/new'
-  # get 'products/create'
-  # get 'products/index'
-  # get 'products/show'
-  # get 'products/edit'
-  # get 'products/update'
-  # get 'products/destroy'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

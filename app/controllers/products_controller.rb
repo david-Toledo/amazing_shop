@@ -40,6 +40,15 @@ class ProductsController < ApplicationController
 
   def update
     product = Product.find params[:id]
+
+    if params[:file].present?
+      response = Cloudinary::Uploader.upload params[:file]
+      p response
+      product.image=response["public_id"]
+      product.save
+      # raise "hell"
+    end
+    
     product.update product_params
     redirect_to product_path(product.id)
   end
