@@ -11,22 +11,38 @@
   </head>
 
   <body>
+    <header>
 
-    <nav>
-        <strong>
-
-
-          <%= link_to "GA Amazing Shop", root_path %>
-
-          <%= link_to "GA Products", products_path %>
+      <nav>
+          <strong>
 
 
+            <%= link_to "GA Amazing Shop", root_path %>
+
+            <%= link_to "GA Products", products_path %>
+
+            
+            <% if @current_user.present? %>
+
+              <%= link_to "Logout", login_path, method: 'delete'  %>
+
+
+            <% else %>
+              <%= link_to "Login", login_path  %>
+            <% end %>
 
 
 
-        </strong>
 
-    </nav>
+          </strong>
+
+      </nav>
+    </header>
+
+    <% if @current_user.present? %>
+      Welcome back, <strong> <%= @current_user.username %> </strong>
+    <% else %>
+    <% end %>
 
     <%= yield %>
 

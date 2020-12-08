@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+
+
+resources :baskets
+  # get 'baskets/new'
+  # get 'baskets/create'
+  # get 'baskets/index'
+  # get 'baskets/show'
+  # get 'baskets/edit'
+  # get 'baskets/update'
+  # get 'baskets/destroy'
 resources :users
   # get 'users/new'
   # get 'users/create'

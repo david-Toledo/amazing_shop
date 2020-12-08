@@ -1,0 +1,6 @@
+
+<% if @basket.user_id == @current_user.id %>
+<%= link_to 'Edit Basket', edit_basket_path(@basket.id) %>
+<% end %>
+
+<h1>Basket created by <%= @basket.user.username %> </h1>
