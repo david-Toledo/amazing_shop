@@ -25,11 +25,11 @@ puts "creating products....."
 
 Product.destroy_all
 
-product1 = Product.create! title:'tpg modem', brand:'tpg', department:"electronics", description: "fantastic modem for the householder", price:99.90, image:"https://place-puppy.com/300x600"
+product1 = Product.create! title:'tpg modem', brand:'tpg', department:"electronics", description: "Ultrafast Wi-Fi - W-Fi speeds boosted with NitroQAM and 5GHz quad-stream technology to handle even the busiest home networks with ease", price:99.90, image:"https://place-puppy.com/300x500"
 
-product2 = Product.create! title:'samsung tv 55 inches', brand:'samsung', department:"electronics", description: "fantastic modem for the householder", price:999.90, image:"https://place-puppy.com/300x600"
+product2 = Product.create! title:'samsung tv 55 inches', brand:'samsung', department:"electronics", description: "With 4K X-Reality PRO, every image is upscaled closer to true 4K quality for remarkable clarity Images are sharpened and refined in real time", price:999.90, image:"https://place-puppy.com/300x600"
 
-product3 = Product.create! title:'ethernet cable', brand:'link', department:"electronics", description: "fantastic modem for the householder", price:10.00, image:"https://place-puppy.com/300x600"
+product3 = Product.create! title:'ethernet cable', brand:'link', department:"electronics", description: "fUniversal Compatibility: This high-speed ethernet cable connects all the hardware destinations on a faster Gigabit Local Area Network (LAN). It is compatible for PC, laptop, computer server, printer, router, modem, networking switch boxe, network media player, NAS, VoIP phone, IP cam, Raspberry Pi 4, PS3, PS4, Nintendo Switch, X-box, cloud data server, patch panel, coupler, hub, smart TV and more with RJ45 connector. It is also backward compatible with Cat5, Cat5e and Cat6 standard.", price:10.00, image:"https://place-puppy.com/300x400"
 
 puts "created products: #{Product.count}"
 

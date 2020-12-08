@@ -1,2 +1,43 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+
+<h2>
+<%= @product.title %>
+
+</h2>
+
+<div class="">
+
+  <%= link_to 'Edit Product', edit_product_path  %>
+
+   <%= link_to 'Delete Product', product_path(@product.id), method:'delete' %>
+
+</div>
+
+
+
+<div class="">
+
+  <p>
+    <strong>Price:</strong>
+    AUD $ <%= @product.price %>
+  </p>
+  <p>
+    <strong>Brand:</strong>
+    <%= @product.brand %>
+  </p>
+  <p>
+    <strong>Department:</strong>
+    <%= @product.department %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+  <p>
+
+    <%= image_tag @product.image %>
+  </p>
+
+    
+
+
+</div>
