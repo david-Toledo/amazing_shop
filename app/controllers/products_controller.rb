@@ -2,11 +2,21 @@ class ProductsController < ApplicationController
 
 #create
   def new
-    @product=Product.new
+    @product = Product.new
   end
 
   def create
-    Product.create product_params
+    product = Product.new product_params
+
+
+    if params[:file].present?
+      response = Cloudinary::Uploader.upload params[:file]
+      p response
+      product.image=response["public_id"]
+      product.save
+      # raise "hell"
+    end
+
     redirect_to products_path
 
   end
@@ -14,11 +24,11 @@ class ProductsController < ApplicationController
 #read
 
   def index
-    @products=Product.all
+    @products = Product.all
   end
 
   def show
-    @product=Product.find params[:id]
+    @product = Product.find params[:id]
   end
 
 #update

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AmazingShop</title>
+    <title>GA AmazingShop</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,7 +15,14 @@
     <nav>
         <strong>
 
-          Amazing Shop
+
+
+
+          <%= link_to "GA Amazing Shop", root_path %>
+
+            <%= link_to "GA Products", products_path %>
+
+
 
         </strong>
 
@@ -22,6 +30,6 @@
 
     <%= yield %>
 
-    
+
   </body>
 </html>
