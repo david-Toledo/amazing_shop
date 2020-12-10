@@ -17,18 +17,22 @@
           <strong>
 
 
-            <%= link_to "GA Amazing Shop", root_path %>
+            |<%= link_to "Home", root_path %>|
 
-            <%= link_to "GA Products", products_path %>
+            |<%= link_to "Products", products_path %>|
 
-            
+
             <% if @current_user.present? %>
 
-              <%= link_to "Logout", login_path, method: 'delete'  %>
+              |<%= link_to "basket", basket_path %>|
+
+              |<%= link_to "Logout", login_path, method: 'delete'  %>|
 
 
             <% else %>
-              <%= link_to "Login", login_path  %>
+              |<%= link_to "Login", login_path  %>|
+              |<%= link_to "Sign Up", new_user_path  %>|
+
             <% end %>
 
 
@@ -40,12 +44,20 @@
     </header>
 
     <% if @current_user.present? %>
-      Welcome back, <strong> <%= @current_user.username %> </strong>
+      Welcome, <strong> <%= @current_user.username %> </strong>
+
     <% else %>
     <% end %>
 
     <%= yield %>
 
+
+    <footer>
+    <hr>
+
+    &copy Follow us on Facebook
+
+    </footer>
 
   </body>
 </html>

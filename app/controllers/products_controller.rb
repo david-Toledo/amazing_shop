@@ -25,10 +25,12 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+
   end
 
   def show
     @product = Product.find params[:id]
+    
   end
 
 #update
@@ -48,7 +50,7 @@ class ProductsController < ApplicationController
       product.save
       # raise "hell"
     end
-    
+
     product.update product_params
     redirect_to product_path(product.id)
   end

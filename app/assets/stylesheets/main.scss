@@ -8,8 +8,29 @@ nav{
 
 body{
   background-color:#64b5f6;
+
+
+
 }
+div{
+  margin: 10px !important;
+
+}
+
 
 h2{
   color:#e65100
+}
+
+footer{
+  color:#e65100;
+  position: fixed;
+  width:100%;
+  // margin-bottom: 2px;
+  bottom: 5px;
+}
+
+img{
+  max-width: 150px;
+  // max-height: 100px;
 }

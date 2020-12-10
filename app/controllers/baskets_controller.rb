@@ -1,16 +1,27 @@
 class BasketsController < ApplicationController
-  def new
+
+  before_action :check_if_logged_in
+
+  def user_basket
+
   end
 
-  def create
+  def add_item
+    LineItem.create(
+      product_id:params[:product_id],
+      quantity:params[:quantity],
+      basket_id:@current_user.basket.id
+    )
+    redirect_to basket_path
   end
 
   def index
+    @baskets = Basket.all
   end
 
   def show
     @basket = Basket.find params[:id]
-    
+
   end
 
   def edit

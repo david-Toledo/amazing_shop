@@ -2,13 +2,14 @@
 <h1>Amazing Products in stock</h1>
 
 
-List:
+<div class="">
 
-<ul>
+  <ul>
 
-  <% @products.each do |product| %>
-  <li>
-    <%= link_to product.title, product_path(product.id) %>
-  </li>
-  <% end %>
-</ul>
+    <% @products.each do |product| %>
+    <li>
+      <%= link_to product.title, product_path(product.id) %>
+    </li>
+    <% end %>
+  </ul>
+</div>
