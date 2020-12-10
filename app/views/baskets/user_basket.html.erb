@@ -3,8 +3,8 @@
 <h1>Your basket!</h1>
 <h6>Please review and update before checking out</h6>
 <br>
-<div class="">
-<%= link_to "<button> Check out</button>".html_safe, basket_check_out_path %>
+<div class="waves-effect waves-light btn">
+<%= link_to "Check out", basket_check_out_path %>
 </div>
 
 <br>
@@ -26,8 +26,9 @@
 
           <%= f.hidden_field :product_id, :value => item.product.id %>
           Qty<%= f.number_field :quantity, :value => item.quantity, :min =>1%>
-
-          <%= f.submit "update quantity" %>
+          <div class="waves-effect waves-light btn">
+            <%= f.submit "update quantity" %>
+          </div>
           <br>
           <br>
 

@@ -14,3 +14,8 @@
 //= require_tree .
 //= require jquery_ujs
 //= require materialize-sprockets
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
