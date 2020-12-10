@@ -23,9 +23,13 @@
 
       </p>
 
-      <br>
+      Subtotal: AUD <%= item.product.price*item.quantity %>
+
   <% end %>
 
+      Total :
+
+      <br>
   <%= fields_for( :payment ) do |p| %>
 
 
@@ -50,7 +54,9 @@
 
 <% end %>
 
-
-  <button type="button" name="button"> Pay </button>
+  <div class="">
+    <button type="button" name="button"> Pay </button>
+    
+  </div>
 
 </div>

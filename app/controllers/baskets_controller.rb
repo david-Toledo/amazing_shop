@@ -32,11 +32,11 @@ class BasketsController < ApplicationController
 
   def check_out
     @basket = Basket.find params[:id]
+
   end
 
   def edit
-      # @basket = Basket.find params[:id]
-      # redirect_to login_path unless @basket.user_id == @current_user.id
+
   end
 
   def user_basket_edit
