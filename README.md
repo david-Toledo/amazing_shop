@@ -1,24 +1,27 @@
-# README
+The Amazing GA Shop
+=================================================================================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my 2nd project in GA and it was created in early December.
 
-Things you may want to cover:
+With COVID changing the way how we live the e-shops are necessary for any business to keep growing.
 
-* Ruby version
+This e-shop project use CRUD operations, associations, authorisation and authentication systems in Ruby on rails.
 
-* System dependencies
+This is a basic model where users can be created, users can log in, log out and select different items and add them in their shopping cart.
 
-* Configuration
+Link
+============================================================
+Github: https://davidtoledo87.github.io/amazing_shop/
+Heroku: https://ga-amazing-shop.herokuapp.com/
 
-* Database creation
+Technologies Used
+=============================================================
+-Ruby on Rails (testing)
+-Heroku (online production)
+-Cloudinary (images uploader)
+-Github (data back up)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Known bugs
+==============================================================
+Items cannot be removed from the shopping cart
+Payment button doesn't work yet
