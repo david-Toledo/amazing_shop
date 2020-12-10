@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-    
+
   end
 
   def create
@@ -27,7 +27,19 @@ class UsersController < ApplicationController
   end
 
   def update
+    user = User.find params[:id]
+
+    if params[:file].present?
+      response = Cloudinary::Uploader.upload params[:file]
+      p response
+      user.image=response["public_id"]
+      user.save
+    end
+
+    user.update user_params
+    redirect_to root_path
   end
+
 
   def destroy
   end

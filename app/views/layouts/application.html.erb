@@ -26,9 +26,8 @@
             <% if @current_user.present? %>
 
               |<%= link_to "basket", basket_path %>|
-
+              |<%= link_to "Edit Profile", users_edit_path %>|
               |<%= link_to "Logout", login_path, method: 'delete'  %>|
-
 
             <% else %>
               |<%= link_to "Login", login_path  %>|
@@ -43,12 +42,14 @@
 
       </nav>
     </header>
-
+    <div class="littleimg">
     <% if @current_user.present? %>
     <%= "(Admin)" if @current_user.admin? %>  Welcome, <strong> <%= @current_user.username %> </strong>
-
-    <% else %>
+    <%= cl_image_tag @current_user.image %>
     <% end %>
+
+
+    </div>
 
     <%= yield %>
 

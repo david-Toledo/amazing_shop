@@ -11,6 +11,7 @@ resources :line_items
 
 resources :baskets
 
+  get '/users/edit' => 'users#edit'
 resources :users
 
 resources :products
