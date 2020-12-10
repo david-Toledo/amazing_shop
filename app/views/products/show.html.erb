@@ -1,10 +1,10 @@
-
 <h2>
 <%= @product.title %>
 
 </h2>
 
 <div class="">
+
 
   <%= link_to 'Edit Product', edit_product_path  %>
 
@@ -34,12 +34,17 @@
   </p>
 
   <p>
+    <div class="form">
+
+
     <%= form_with url: basket_add_item_path, local:true do |f| %>
     <%= f.label :quantity %>
     <%= f.number_field :quantity, :value =>1, :min =>1 %>
     <%= f.hidden_field :product_id, value: @product.id %>
     <%= f.submit 'Add' %>
     <%end %>
+
+    </div>
 
   </p>
 

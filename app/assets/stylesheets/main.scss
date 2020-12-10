@@ -8,13 +8,19 @@ nav{
 
 body{
   background-color:#64b5f6;
-
+  margin: 10px !important;
 
 
 }
 div{
   margin: 10px !important;
 
+}
+
+.form{
+  // border: 1px solid green;
+  max-width: 100px;
+  margin-left: 0px !important;
 }
 
 
@@ -33,4 +39,24 @@ footer{
 img{
   max-width: 150px;
   // max-height: 100px;
+}
+
+.jumbotron {
+  text-align: center;
+  color: #fff;
+  font-family: 'Helvetica Neue' !important;
+  // padding-top: 25px;
+  // padding-bottom: 25px;
+  // margin-left: 15px;
+  // margin-right: 15px;
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+}
+
+.imagen{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.credit{
+  max-width: 200px;
 }

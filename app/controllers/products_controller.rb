@@ -14,14 +14,12 @@ class ProductsController < ApplicationController
       p response
       product.image=response["public_id"]
       product.save
-      # raise "hell"
     end
 
     redirect_to products_path
 
   end
 
-#read
 
   def index
     @products = Product.all
@@ -30,10 +28,9 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find params[:id]
-    
+
   end
 
-#update
 
   def edit
     @product = Product.find params[:id]
@@ -48,15 +45,12 @@ class ProductsController < ApplicationController
       p response
       product.image=response["public_id"]
       product.save
-      # raise "hell"
     end
 
     product.update product_params
     redirect_to product_path(product.id)
   end
 
-
-#destroy
 
   def destroy
     Product.destroy params[:id]

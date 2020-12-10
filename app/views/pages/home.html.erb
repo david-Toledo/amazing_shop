@@ -1,13 +1,30 @@
 <h1>
 
-Welcome to the Amazing Shop
+
 
 </h1>
 
-<h3>
 
+
+<% if @current_user %>
+
+<% else %>
+<div class="jumbotron">
+<h2>Welcome to the Amazing Shop!</h2>
+<p class="lead">
+  You will love Shopping with us! Log in or Sign up!
+</p>
+</div>
+<% end %>
+
+<div class="jumbotron">
+<h3>
   Browse:
 
   <%= link_to "products", products_path %>
-
 </h3>
+</div>
+
+<div class="imagen">
+  <img src="https://lh3.googleusercontent.com/pw/ACtC-3dLVXu8M6GERDpsdQxD0sB9PVFDHSS2l48fmDoPGy55RlKLt8hfDxyVH4gRxhUI--xSUi3fJQ38TzDFsLNJlGk2tvb9BJyQLlk6xN4_TUvTDBS45DITHS-P2x3t7ojJzZ2hZTsioTHfYcP1E543RLQvGA=s225-no?authuser=0')" alt="">
+</div>

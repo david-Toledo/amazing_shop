@@ -1,0 +1,46 @@
+
+
+<h1>Your basket</h1>
+
+
+
+<div class="">
+
+  <% @current_user.basket.line_items.each do |item| %>
+      <p>
+        Product: <%= item.product.title %>
+      </p>
+      <p>
+        Quantity: <%= item.quantity %>
+      </p>
+      <br>
+  <% end %>
+
+  <%= fields_for( :payment ) do |p| %>
+
+
+<div class="credit">
+<%= p.label :card_number, "Card Number", data: { stripe: 'label'} %>
+<%= p.text_field :card_number, class: "form-control", required: true, data: { stripe: 'number'} %>
+</div>
+
+<div class="credit">
+<%= p.label :card_cvv, "Card CVV", data: { stripe: 'label'} %>
+<%= p.text_field :card_cvv, class: "form-control", required: true, data: { stripe: 'cvv'} %>
+</div>
+
+<div class="credit">
+<%= p.label :card_expires, "Card Expires", data: { stripe: 'label'} %>
+<%= p.text_field :card_cvv, class: "form-control", required: true, data: { stripe: 'exp-year'} %>
+
+</div>
+
+</div>
+
+
+<% end %>
+
+
+  <button type="button" name="button"> Pay </button>
+
+</div>
