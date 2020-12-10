@@ -25,7 +25,7 @@ puts "creating products....."
 
 Product.destroy_all
 
-product1 = Product.create! title:'PS4', brand:'Sony', department:"electronics", description: "Ultrafast Wi-Fi - W-Fi speeds boosted with NitroQAM and 5GHz quad-stream technology to handle even the busiest home networks with ease", price:99.90, image:"https://lh3.googleusercontent.com/pw/ACtC-3coj38_qd7IFeMcnsPKyKRV7iYyzNH77ikZICRzinXxgdD6-KTeoejGYiAqLQFRqmheEenhnauSi12wxbPQiiAWdRwjWm0-j3Z4ObbKvf5Kw7eOc-ItTO8NNnMNsSxqlOe13Tacni_vfAJipfcjs2s4og=w640-h359-no?authuser=0"
+product1 = Product.create! title:'PS4', brand:'Sony', department:"electronics", description: "Ultrafast Wi-Fi - W-Fi speeds boosted with NitroQAM and 5GHz quad-stream technology to handle even the busiest home networks with ease", price:299.90, image:"https://lh3.googleusercontent.com/pw/ACtC-3coj38_qd7IFeMcnsPKyKRV7iYyzNH77ikZICRzinXxgdD6-KTeoejGYiAqLQFRqmheEenhnauSi12wxbPQiiAWdRwjWm0-j3Z4ObbKvf5Kw7eOc-ItTO8NNnMNsSxqlOe13Tacni_vfAJipfcjs2s4og=w640-h359-no?authuser=0"
 
 product2 = Product.create! title:'samsung tv 55 inches', brand:'samsung', department:"electronics", description: "With 4K X-Reality PRO, every image is upscaled closer to true 4K quality for remarkable clarity Images are sharpened and refined in real time", price:999.90, image:"https://lh3.googleusercontent.com/pw/ACtC-3cFE7gBRY4eQGE0zTgFkg8gQK3iefIzW6zF7gS9PZzL3OHwBnL950dJPXTrYcoTBeQKO5qVdsRkDB8LQqpVvbcATRM209Rn7QhGjJDk5V9T3gPubZkKxaV14mJ1unF0ZzqAudwe1DkDd1Gjl8j4xzEMHA=w720-h576-no?authuser=0"
 

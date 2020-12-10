@@ -1,8 +1,13 @@
 
+<h1>Your basket is ready to go!</h1>
 
-<h1>Your basket</h1>
+<h6>Please review order and enter payment details below</h6>
+<br>
 
+<div class="">
+  <%= link_to "<button> Edit Basket </button>".html_safe, basket_path %>
 
+</div>
 
 <div class="">
 
@@ -13,6 +18,11 @@
       <p>
         Quantity: <%= item.quantity %>
       </p>
+      <p>
+        <%= cl_image_tag item.product.image %>
+
+      </p>
+
       <br>
   <% end %>
 
