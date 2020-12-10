@@ -1,22 +1,15 @@
 
-<h1>Amazing Products in stock</h1>
+<h1>GA Products</h1>
 
-<div class="">
 
   <% if @current_user.present? && @current_user.admin? %>
-
-  <%= link_to 'Add a New Product', new_product_path  %>
-
-   <% end %>
-
-<div class="">
+    <%= link_to 'Add a New Product', new_product_path  %>
+  <% end %>
 
   <ul>
-
     <% @products.each do |product| %>
     <li>
       <%= link_to product.title, product_path(product.id) %>
     </li>
     <% end %>
   </ul>
-</div>
