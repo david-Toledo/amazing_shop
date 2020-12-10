@@ -9,7 +9,7 @@ This e-shop project use CRUD operations, associations, authorisation and authent
 
 This is a basic model where users can be created, users can log in, log out and select different items and add them in their shopping cart.
 
-Link
+Links
 ============================================================
 Github: https://davidtoledo87.github.io/amazing_shop/
 Heroku: https://ga-amazing-shop.herokuapp.com/
@@ -23,5 +23,5 @@ Technologies Used
 
 Known bugs
 ==============================================================
-Items cannot be removed from the shopping cart
-Payment button doesn't work yet
+-Items cannot be removed from the shopping cart.
+-Payment button doesn't work yet
