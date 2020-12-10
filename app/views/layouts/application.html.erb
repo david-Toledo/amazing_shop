@@ -45,7 +45,7 @@
     </header>
 
     <% if @current_user.present? %>
-      Welcome, <strong> <%= @current_user.username %> </strong>
+    <%= "(Admin)" if @current_user.admin? %>  Welcome, <strong> <%= @current_user.username %> </strong>
 
     <% else %>
     <% end %>
@@ -59,7 +59,7 @@
       &copy Follow us on Facebook
 
       </footer>
-    
+
 
 
   </body>

@@ -3,4 +3,7 @@
   New Product
 </h2>
 
+  <% if @current_user.present? && @current_user.admin? %>
   <%= render partial: 'form' %>
+  
+  <% end %>

@@ -5,10 +5,13 @@
 
 <div class="">
 
+  <% if @current_user.present? && @current_user.admin? %>
 
   <%= link_to 'Edit Product', edit_product_path  %>
 
    <%= link_to 'Delete Product', product_path(@product.id), method:'delete' %>
+
+   <% end %>
 
 </div>
 
