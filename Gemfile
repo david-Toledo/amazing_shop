@@ -56,3 +56,5 @@ end
 gem 'pry-rails'
 
 gem 'cloudinary'
+
+gem "braintree", "~> 3.1.0"

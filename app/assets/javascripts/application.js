@@ -12,10 +12,10 @@
 //
 //= require rails-ujs
 //= require_tree .
+//= require jquery
 //= require jquery_ujs
 //= require materialize-sprockets
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
+$(document).ready(function(){
+    $('.sidenav').sidenav();
   });
