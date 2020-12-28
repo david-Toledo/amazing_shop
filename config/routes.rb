@@ -6,7 +6,7 @@ resources :line_items
 
   get '/basket' => 'baskets#user_basket'
   post '/basket/add_item' => 'baskets#add_item'
-  get '/basket/check_out' => 'baskets#user_basket_check_out'
+  get '/basket/check_out' => 'baskets#check_out'
   get '/basket/edit' => 'baskets#user_basket_edit'
 
 resources :baskets

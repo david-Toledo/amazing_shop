@@ -20,8 +20,16 @@ Technologies Used
 -Heroku (online production)
 -Cloudinary (images uploader)
 -Github (data back up)
+-Materialize (for the layout)
 
 Known bugs
 ==============================================================
 -Items cannot be removed from the shopping cart.
 -Payment button doesn't work yet
+
+
+Future updates
+=================================================================
+-add more products and categories
+-make it mobile friendly
+-have past orders

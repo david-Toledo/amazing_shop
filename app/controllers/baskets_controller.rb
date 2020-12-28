@@ -31,7 +31,12 @@ class BasketsController < ApplicationController
   end
 
   def check_out
-    @basket = Basket.find params[:id]
+    @total = 0
+    @current_user.basket.line_items.each do |item|
+      @total += item.product.price*item.quantity
+
+    end
+
 
   end
 

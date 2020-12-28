@@ -11,6 +11,8 @@
 
 <div class="">
 
+
+
   <% @current_user.basket.line_items.each do |item| %>
       <p>
         Product: <%= item.product.title %>
@@ -27,7 +29,7 @@
 
   <% end %>
 
-      Total :
+      Total : <%= @total %>
 
       <br>
   <%= fields_for( :payment ) do |p| %>
