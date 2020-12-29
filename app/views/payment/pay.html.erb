@@ -1,0 +1,38 @@
+<h1>Payment</h1> AUD<%= @total %>
+ <script src="https://js.braintreegateway.com/web/dropin/1.25.0/js/dropin.min.js"></script>
+
+ <!-- Step one: add an empty container to your page -->
+  <%= form_with url: payment_path, id:"payment-form", local:true do |f| %>
+    <%= hidden_field_tag "nonce" %>
+    <div id="dropin-container"></div>
+
+    <input type="submit" name="" value="pay now">
+  <% end %>
+
+
+  <script type="text/javascript">
+      // Step two: create a dropin instance using that container (or a string
+    //   that functions as a query selector such as `#dropin-container`)
+    const form = document.getElementById('payment-form');
+    braintree.dropin.create({
+      container: document.getElementById('dropin-container'),
+      authorization: "<%= @token %>"
+
+      // ...plus remaining configuration
+    }, function (error, dropinInstance) {
+      if (error) console.error(error);
+
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+
+        dropinInstance.requestPaymentMethod((error, payload) => {
+          if (error) console.error(error);
+
+
+          document.getElementById('nonce').value = payload.nonce;
+          form.submit();
+        })
+      })
+
+    });
+  </script>

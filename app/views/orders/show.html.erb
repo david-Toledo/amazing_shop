@@ -1,0 +1,20 @@
+<h1>Your Items Ordered</h1>
+
+<p>Order #<%= @order %> </p>
+
+
+
+<ul>
+
+  <% @order_items.each do |order_item| %>
+  <li>
+
+    <%=  order_item.quantity %>
+    x
+    <%=  order_item.product.title %>
+    <br>
+    <%= cl_image_tag order_item.product.image %>
+
+  </li>
+  <% end %>
+</ul>

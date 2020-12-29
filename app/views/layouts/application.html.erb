@@ -8,12 +8,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
   </head>
 
 
   <body>
     <header>
 
+<<<<<<< HEAD
       <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Logo</a>
@@ -36,11 +38,55 @@
 
   
 
+=======
+>>>>>>> braintree
       <nav>
+    <div class="nav-wrapper container">
+      <ul>
+        <li class="brand-logo"><%= link_to "The GA Shop" , root_path  %> </li>
+      </ul>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><%= link_to "Products", products_path %></li>
+        <% if @current_user.present? %>
+          <li><%= link_to "basket", basket_path %></li>
+          <li><%= link_to "Orders", orders_path %></li>
+          <li><%= link_to "Edit profile", users_edit_path %></li>
+          <li><%= link_to "Logout", login_path, method: 'delete'%></li>
+        <% else %>
+          <li><%= link_to "Login", login_path  %></li>
+          <li><%= link_to "Sign Up", new_user_path  %></li>
+        <% end %>
+
+      </ul>
+    </div>
+  </nav>
+
+   <ul class="sidenav" id="mobile-demo">
+    <li><%= link_to "Products", products_path %></li>
+    <% if @current_user.present? %>
+      <li><%= link_to "basket", basket_path %></li>
+      <li><%= link_to "Orders", orders_path %></li>
+      <li><%= link_to "Edit profile", users_edit_path %></li>
+      <li><%= link_to "Logout", login_path, method: 'delete'%></li>
+    <% else %>
+      <li><%= link_to "Login", login_path  %></li>
+      <li><%= link_to "Sign Up", new_user_path  %></li>
+    <% end %>
+
+  </ul>
+
+
+
+      <!-- <nav>
         <div class="nav-wrapper container" >
           <ul id="nav-mobile" class="left hide-on-med-and-down">
 
+<<<<<<< HEAD
             <li> <%= link_to "The Amazing Shop", root_path %> </li>
+=======
+            <li> <%= link_to "The GA Shop", root_path %> </li>
+>>>>>>> braintree
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <li><%= link_to "Products", products_path %></li>
             <% if @current_user.present? %>
@@ -53,6 +99,7 @@
             <% end %>
           </ul>
         </div>
+<<<<<<< HEAD
       </nav>
 
       <ul class="sidenav" id="mobile-demo">
@@ -61,6 +108,9 @@
         <li><a href="collapsible.html">Javascript</a></li>
         <li><a href="mobile.html">Mobile</a></li>
       </ul>
+=======
+      </nav> -->
+>>>>>>> braintree
 
     </header>
 

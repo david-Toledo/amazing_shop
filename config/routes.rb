@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  # get 'orders/index'
+  # get 'orders/show'
+
+  resources :orders
+
 root to: 'pages#home'
 
 resources :line_items
@@ -21,5 +26,7 @@ get '/login' => 'session#new'
 post '/login' => 'session#create'
 delete '/login' => 'session#destroy'
 
+get '/payment' => 'payment#pay'
+post '/payment' => 'payment#process_payment'
 
 end

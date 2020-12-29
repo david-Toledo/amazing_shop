@@ -12,7 +12,7 @@ puts "creating users....."
 
 User.destroy_all
 
-user1 = User.create! email:'david@ga.co', password:'pass', username:'david_sei', image:"https://place-puppy.com/300x500"
+user1 = User.create! email:'david@ga.co', password:'pass', username:'david_sei', image:"https://place-puppy.com/300x500", admin:true
 
 user2 = User.create! email:'luke@ga.co', password:'pass', username:'luke_sei', image:"https://place-puppy.com/300x400"
 
@@ -61,3 +61,34 @@ line_item7 = LineItem.create! quantity:15, basket_id:basket1.id, product_id:prod
 
 puts "created line_items: #{LineItem.count}"
 puts LineItem.pluck :basket_id
+
+puts "creating orders....."
+
+Order.destroy_all
+
+order1=Order.create! user_id: user1.id, total:500
+order2=Order.create! user_id: user2.id, total:500
+order3=Order.create! user_id: user3.id, total:500
+order4=Order.create! user_id: user1.id, total:800
+order5=Order.create! user_id: user2.id, total:900
+order6=Order.create! user_id: user3.id, total:900
+
+
+puts "created orders: #{Order.count}"
+# puts Order.pluck :basket_id
+
+
+OrderItem.destroy_all
+
+order_item1 = OrderItem.create! quantity:1, order_id:order1.id, product_id:product1.id, subtotal:500
+order_item2 = OrderItem.create! quantity:2, order_id:order2.id, product_id:product1.id, subtotal:500
+order_item3 = OrderItem.create! quantity:3, order_id:order3.id, product_id:product1.id, subtotal:400
+order_item4 = OrderItem.create! quantity:4, order_id:order4.id, product_id:product2.id, subtotal:600
+order_item5 = OrderItem.create! quantity:5, order_id:order5.id, product_id:product2.id, subtotal:900
+order_item6 = OrderItem.create! quantity:6, order_id:order6.id, product_id:product2.id, subtotal:700
+order_item7 = OrderItem.create! quantity:7, order_id:order1.id, product_id:product3.id, subtotal:1500
+order_item8 = OrderItem.create! quantity:8, order_id:order2.id, product_id:product3.id, subtotal:1500
+order_item9 = OrderItem.create! quantity:9, order_id:order3.id, product_id:product3.id, subtotal:1500
+order_item10 = OrderItem.create! quantity:10, order_id:order4.id, product_id:product3.id, subtotal:600
+order_item11 = OrderItem.create! quantity:11, order_id:order5.id, product_id:product3.id, subtotal:900
+order_item12 = OrderItem.create! quantity:12, order_id:order6.id, product_id:product3.id, subtotal:700
